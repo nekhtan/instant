@@ -1,0 +1,20 @@
+meta {
+  name: Find all parking lots of city
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/api/parkingLots/poitiers/all?page=1&size=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  size: 2
+}
+
+settings {
+  encodeUrl: true
+}

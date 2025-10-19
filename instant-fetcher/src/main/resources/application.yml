@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    include: data
+  main:
+    banner-mode: "log"
+    web-application-type: none
+
+fetcher:
+  sources:
+    - city: "Poitiers"
+      url: "https://data.grandpoitiers.fr/data-fair/api/v1/datasets/mobilites-stationnement-des-parkings-en-temps-reel/lines"
+      type: "json"
+      schedule: "0 * * * * *"
+      enabled: true
+
+    - city: "Strasbourg"
+      url: "https://data.strasbourg.eu/api/explore/v2.1/catalog/datasets/occupation-parkings-temps-reel/records"
+      type: "json"
+      schedule: "0 * * * * *"
+      enabled: true
+
+    - city: "Amp"
+      url: "https://data.ampmetropole.fr/api/explore/v2.1/catalog/datasets/disponibilites-des-places-de-parkings/records?limit=100"
+      type: "json"
+      schedule: "0 * * * * *"
+      enabled: true

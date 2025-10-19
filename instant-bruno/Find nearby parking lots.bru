@@ -1,0 +1,21 @@
+meta {
+  name: Find nearby parking lots
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/api/parkingLots/near?latitude=48.5839200&longitude=7.7455300&radius=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  latitude: 48.5839200
+  longitude: 7.7455300
+  radius: 5
+}
+
+settings {
+  encodeUrl: true
+}

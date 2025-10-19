@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    include: data
+  main:
+    banner-mode: "log"
+    web-application-type: servlet
